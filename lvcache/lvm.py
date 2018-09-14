@@ -111,7 +111,7 @@ class LogicalVolume(object):
             self.log.info(line.strip())
 
     def attach_cache_pool(self, cache_lv):
-        lvconvert('--type', 'cache',
+        lvconvert('--yes', '--type', 'cache',
                   '--cachepool', '%s/%s' % (cache_lv.vg.name,
                                             cache_lv.name),
                   '%s/%s' % (self.vg.name, self.name))
