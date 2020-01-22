@@ -7,7 +7,7 @@ from . import lvm
 
 
 def adjust_512(num):
-    return 512 * (num/512)
+    return 512 * int(num/512)
 
 
 class Create(Command):
